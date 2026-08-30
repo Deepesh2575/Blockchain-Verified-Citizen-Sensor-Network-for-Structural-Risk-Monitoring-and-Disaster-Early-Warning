@@ -1,0 +1,31 @@
+{
+  "models": [
+    {
+      "id": "tiny",
+      "file": "models/vibration_anomaly_tiny_int8.tflite",
+      "version": "1.0.0",
+      "input_features": 12,
+      "quantization": "int8",
+      "size_kb": 15
+    },
+    {
+      "id": "small",
+      "file": "models/vibration_anomaly_small_int8.tflite",
+      "version": "1.0.0",
+      "input_features": 32,
+      "window_samples": 256,
+      "quantization": "int8",
+      "size_kb": 180
+    },
+    {
+      "id": "medium",
+      "file": "models/vibration_anomaly_medium_fp16.tflite",
+      "version": "1.0.0",
+      "input_features": 64,
+      "window_samples": 512,
+      "spectrogram_shape": [32, 16],
+      "quantization": "fp16",
+      "size_kb": 1200
+    }
+  ]
+}
