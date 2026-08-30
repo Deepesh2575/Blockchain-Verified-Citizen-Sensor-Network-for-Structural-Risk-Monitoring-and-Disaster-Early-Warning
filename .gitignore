@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+Thumbs.db
+android/.gradle/
+android/app/build/
+android/sensing-core/build/
+android/build/
+android/local.properties
+my-app/.next/
+ml-training/venv/
+ml-training/venv_win/
+ml-training/__pycache__/

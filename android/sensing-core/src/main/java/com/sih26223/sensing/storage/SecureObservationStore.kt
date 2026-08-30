@@ -47,6 +47,6 @@ interface ObservationDao {
 }
 
 @Database(entities = [ObservationEntity::class], version = 1, exportSchema = false)
-abstract class SecureObservationDatabase : androidx.room.Database() {
+abstract class SecureObservationDatabase : androidx.room.RoomDatabase() {
     abstract fun observationDao(): ObservationDao
 }

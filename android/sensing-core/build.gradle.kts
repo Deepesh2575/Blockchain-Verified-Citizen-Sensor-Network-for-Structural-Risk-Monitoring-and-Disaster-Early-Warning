@@ -10,7 +10,6 @@ android {
 
     defaultConfig {
         minSdk = 26 // Android 8.0
-        targetSdk = 34
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -42,6 +41,4 @@ dependencies {
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
-    implementation(project(":sensing-core"))
-
 }
