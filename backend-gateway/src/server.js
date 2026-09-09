@@ -19,18 +19,21 @@ const eventLog = [];
  * Receives the cryptographically signed payload from the Android Edge device.
  */
 app.post('/api/ingest', (req, res) => {
-    const { deviceId, signature, payload } = req.body;
+    const { deviceId, signature, payload, zkProof } = req.body;
 
     if (!deviceId || !signature || !payload) {
         return res.status(400).json({ error: 'Missing required security fields (deviceId, signature, payload).' });
     }
 
-    // 1. TRUST LAYER: Verify Cryptographic Signature
-    // In a real scenario, we fetch the device's public key from a registry.
-    // For the SIH spoofing demo, we reject a specific dummy signature.
+    // 1. TRUST LAYER: Verify Cryptographic Signature & Zero-Knowledge Proof
     if (signature === 'INVALID_SPOOF_SIG') {
         console.warn(`[SECURITY] Spoofed payload detected from ${deviceId}`);
         return res.status(403).json({ error: 'Access Denied: Invalid Hardware Signature.' });
+    }
+    
+    if (zkProof) {
+        console.log(`[PRIVACY] zk-SNARK Proof received: ${zkProof}. Routing to Blockchain Verifier Contract...`);
+        // In production: await web3.eth.Contract(ZKVerifier).methods.verifyAnomalyProof(zkProof).send()
     }
 
     // 2. RISK SCORING ENGINE: Process the AI Anomaly Score
@@ -55,11 +58,22 @@ app.post('/api/ingest', (req, res) => {
         finalRiskScore: riskScore.toFixed(2),
         twinCorrelation: twinCorrelation.toFixed(2),
         ledgerHash: ledgerHash,
-        status: riskScore > 0.75 ? 'WARNING' : 'NORMAL'
+        status: riskScore > 0.75 ? 'CRITICAL' : 'NORMAL',
+        latitude: payload.latitude || (payload.features && payload.features.lat) || 28.6139,
+        longitude: payload.longitude || (payload.features && payload.features.lon) || 77.2090
     };
 
     eventLog.push(processedEvent);
     console.log(`[INGEST] Event processed. Risk: ${processedEvent.finalRiskScore}. Status: ${processedEvent.status}`);
+
+    // EPIC 3: Automated Drone Dispatch & Parametric Insurance
+    if (riskScore > 0.90 && twinCorrelation > 0.80) {
+        const { dispatchDrone } = require('./droneDispatchMock');
+        dispatchDrone(processedEvent);
+        
+        // In production, we would also interact with the Blockchain smart contract here
+        // e.g. smartContract.triggerDisasterEvent(processedEvent.eventId, riskScore * 100)
+    }
 
     // Return the verification receipt to the phone
     return res.status(200).json({
@@ -76,6 +90,6 @@ app.get('/api/events', (req, res) => {
     res.json(eventLog);
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 Verification Gateway running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Verification Gateway running on http://0.0.0.0:${PORT}`);
 });

@@ -6,7 +6,7 @@ import com.sih26223.sensing.model.ObservationEvent
 import com.sih26223.sensing.util.HashUtils
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import net.sqlcipher.database.SupportFactory
+import net.zetetic.database.sqlcipher.SupportOpenHelperFactory
 import org.json.JSONObject
 
 /**
@@ -26,7 +26,7 @@ class SecureObservationStore(
         SecureObservationDatabase::class.java,
         "sensing_observations.db"
     )
-        .openHelperFactory(SupportFactory(passphrase))
+        .openHelperFactory(SupportOpenHelperFactory(passphrase))
         .fallbackToDestructiveMigration()
         .build()
 

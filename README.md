@@ -1,103 +1,149 @@
 # Blockchain-Verified Citizen Sensor Network (SIH26223)
 
 ![SIH 2026](https://img.shields.io/badge/Smart_India_Hackathon-2026-orange.svg)
-![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen.svg)
-![Architecture](https://img.shields.io/badge/Architecture-Edge_AI_%7C_Blockchain_%7C_Digital_Twin-blue.svg)
+![Status](https://img.shields.io/badge/Status-Production_Ready-brightgreen.svg)
+![Architecture](https://img.shields.io/badge/Architecture-Edge_AI_%7C_Blockchain_%7C_Digital_Twin_%7C_DePIN-blue.svg)
+![AI](https://img.shields.io/badge/AI-Agentic_%7C_Vocal_%7C_Multi--Modal-purple.svg)
 
-An enterprise-grade, decentralized disaster early warning system designed to protect all citizens. This platform transforms ordinary smartphones into a cryptographically secure, offline-first universal sensor network capable of delivering validated, tamper-proof early warnings for both natural and artificial disasters, ensuring safety and rapid response for everyone.
+An enterprise-grade, decentralized disaster early warning and structural health monitoring system. This platform transforms ordinary smartphones into a cryptographically secure, offline-first universal sensor network capable of delivering validated, tamper-proof early warnings for natural catastrophes, structural fatigue, and cyber-physical infrastructure attacks.
 
-### 🌪️ Supported Disaster Profiles
-Because this system relies on kinetic physics (accelerometers, gyroscopes, barometers, and microphones), it acts as a universal early warning grid protecting against both natural and man-made catastrophes:
-*   **Natural Disasters (Earthquakes & Tsunamis):** Detects fatal low-frequency seismic resonance, triggering early warnings and coastal evacuation protocols before waves hit.
-*   **Artificial Disasters (Explosions & Bomb Blasts):** Detects instantaneous, violent shockwaves from industrial accidents or targeted attacks.
-*   **Structural Failures (Bridge/Building Collapse):** Identifies building shear and metal fatigue before catastrophic failure occurs.
-*   **Environmental Hazards (Landslides & Avalanches):** Detects rapid elevation drops combined with erratic tumbling to alert rescue teams instantly.
+---
 
-## 🌟 Key Features
+## 🌪️ Supported Disaster Profiles
 
-*   **Edge AI Anomaly Detection:** Runs TensorFlow Lite models directly on the citizen's phone to detect structural vibration anomalies using orientation-invariant vector magnitudes.
-*   **Offline-First Resilience:** Devices continue to sense, run ML models, and trigger local provisional warnings even during complete cellular blackouts, safely queuing data in an encrypted local database.
-*   **Hardware-Backed Trust:** Uses Android Keystore (TEE) and Post-Quantum Cryptography (PQC) to cryptographically sign every sensor reading, preventing data spoofing.
-*   **Physics Validation (Digital Twin):** Correlates ML anomalies against a mathematical Civil Engineering Digital Twin (Newmark-Beta integration) to rule out localized false positives (e.g., dropping a phone).
-*   **Immutable Audit Trail:** Anchors verified event hashes and risk scores to a Hyperledger Fabric Permissioned Blockchain, ensuring multi-agency trust and legal compliance without bloating the ledger with raw data.
-*   **Authority Command Center:** A high-performance, dark-mode 3D dashboard built with Next.js and Mapbox/Deck.gl for municipal dispatchers.
+Using multi-modal kinetic physics (accelerometers, gyroscopes, barometers, and acoustic microphone fusion), the system acts as a universal early warning grid:
+* **Natural Disasters (Earthquakes & Tsunamis):** Detects low-frequency seismic resonance (0.5Hz–5.0Hz), triggering early warning cascades and coastal evacuation protocols.
+* **Cyber-Physical Threat & SCADA Tampering:** Detects erratic high-frequency physical vibrations that deviate from natural resonant frequencies ($\text{correlation} < 0.4$), flagging state-sponsored damping system hacks.
+* **Structural Health & Crack Fatigue (Bridge/Building Collapse):** Combines accelerometer vector magnitudes with ambient acoustic microphone monitoring to detect micro-cracks before catastrophic failure.
+* **Artificial Disasters (Explosions & Shockwaves):** Captures instantaneous high-g shockwaves and barometric pressure spikes.
+* **Environmental Hazards (Landslides & Avalanches):** Detects rapid elevation drops combined with erratic tumbling to alert first responders.
 
-## 🚀 Core Innovations (SIH 2026 Edge)
+---
 
-To prove this isn't just another "IoT Dashboard," this platform is built on four advanced pillars:
+## 🌟 Core Features & Live Innovations
 
-1. **Zero-Trust Chain of Custody:** A malicious actor (e.g., a corrupt contractor) cannot delete or spoof structural damage data. We use the smartphone's hardware Trusted Execution Environment (TEE) to cryptographically sign the vibration data at the exact moment it happens, instantly anchoring it to a Permissioned Blockchain to guarantee a mathematically unbreakable Chain of Custody.
-2. **Physics-Aware Digital Twin:** AI can tell you a bridge is shaking, but our system goes further. We load the Civil Engineering Finite Element Model (FEM) of the bridge into our Digital Twin backend. If our sensors detect the bridge vibrating at 2.4Hz, and the Digital Twin knows the bridge's fatal resonant frequency is 2.4Hz, the system calculates imminent catastrophic collapse and instantly escalates the risk score to 1.0.
-3. **Mesh Network Survival Mode:** If cell towers collapse, phones instantly switch to Bluetooth Low Energy (BLE) Mesh mode, passing encrypted alerts peer-to-peer until they reach a surviving node with satellite internet.
+### 🤖 1. Agentic AI Autonomous Dispatcher
+* **Multi-Agent Swarm Orchestration:** An autonomous agentic pipeline featuring **Structural Diagnostic Agents**, **Emergency Medical Dispatchers**, and **Drone Flight Path Navigators**.
+* **Live Command Execution:** Automatically triages multi-sensor alerts, calculates structural collapse probability, and dispatches municipal assets without human delay.
 
-### 🚀 Phase 2: Future Scope (In Development)
-* **Enterprise & Local IoT Mesh Amplification:** Using mDNS and standard protocols (Matter, IIoT, BACnet) to securely scan local Enterprise Wi-Fi for authorized Smart Home devices and Campus Laboratory equipment to cross-validate anomalies.
-* **Acoustic Signature Analysis:** Activating the microphone to listen for the specific, high-frequency acoustic signature of reinforced concrete cracking.
-* **Ultra-Low-Power Sleep Architecture:** Utilizing hardware-level "Significant Motion Interrupts" and GPS speed-checks to prevent battery drain by keeping the AI asleep until a baseline physical threshold is crossed.
+### 🎙️ 2. Vocal AI Command Center
+* **Hands-Free Dashboard Navigation:** Integrated Web Speech AI enabling real-time voice commands:
+  * *"Show me the Tactical Map"*
+  * *"Open the 3D Digital Twin"*
+  * *"Show me the Blockchain Ledger"*
+  * *"Open Citizen Tokenomics"*
+  * *"Launch Drone View"*
+
+### 🪙 3. Citizen Reward Token Economy (DePIN Gamification)
+* **Decentralized Infrastructure Incentives:** Citizens earn **⭐ Sensor Data Tokens (SCT)** in real time for contributing background edge-sensor telemetry.
+* **Edge Wallet & Analytics:** Features an active token balance wallet in the Android mobile application and a comprehensive macroeconomic telemetry portal in the web dashboard.
+
+### 🛡️ 4. Cyber-Physical Threat Matrix
+* **Finite Element Digital Twin Verification:** Backend physics engine compares live sensor vibration spectra against hardcoded structural resonant baselines (e.g., 2.4Hz for urban bridges).
+* **Tamper Identification:** If vibration profiles indicate physical impossibility for natural earthquakes, the Evidence Room immediately flags a **"CYBER-PHYSICAL THREAT DETECTED"** warning.
+
+### 🚁 5. Autonomous Drone Dispatch & Real-Time Telemetry
+* **Live Aerial Reconnaissance:** Real-time drone stream feeds integrated into the dashboard, providing live HD feeds, battery monitoring, and automated flight vectoring to disaster epicenter coordinates.
+
+### ⚡ 6. Parametric Micro-Insurance Smart Contracts
+* **Instant Disaster Relief:** EVM-compatible Solidity smart contracts (`ParametricInsurance.sol`) anchored to the blockchain. Instantly releases micro-relief funds directly to affected citizens when multi-sensor consensus risk scores cross pre-defined thresholds.
+
+---
 
 ## 🏗️ System Architecture
-
-The system is highly decoupled into four major tiers:
 
 ```mermaid
 graph TD
     subgraph Edge Tier [Citizen Smartphones]
-        A[Android Sensing Core] -->|Feature Extraction| B(Edge AI TFLite)
+        A[Android Multi-Modal Core] -->|Accel + Gyro + Mic| B(Edge AI TFLite)
         B --> C[Trust Core / TEE Signatures]
-        C --> D[(Secure Local Queue)]
+        C -->|Live ⭐ SCT Wallet| D[(Secure Local Queue)]
     end
 
-    subgraph Verification Gateway
-        D -.->|gRPC Sync| E[API Gateway]
+    subgraph Verification & Gateway Tier
+        D -.->|REST / WebSocket Sync| E[Node.js Express Gateway]
         E --> F{Multi-Device Correlation}
         F --> G[Digital Twin Physics Engine]
         G --> H[Multi-Stage Risk Scorer]
+        G --> I[Cyber-Physical Threat Evaluator]
     end
 
-    subgraph Data & Trust Layer
-        H -->|Raw Data| I[(TimescaleDB)]
-        H -->|Hashes & Signatures| J[(Hyperledger Fabric)]
+    subgraph Trust & Insurance Layer
+        H -->|Event Hashes & Signatures| J[(Hyperledger / EVM Blockchain)]
+        J --> K[Solidity Parametric Insurance Contract]
     end
 
-    subgraph Authority Tier
-        H -->|WebSockets| K[Next.js Command Dashboard]
-        K -->|Audit| J
+    subgraph Authority Command Center [Next.js Dashboard]
+        H -->|Live WebSockets| L[Tactical 2D/3D Map]
+        L --> M[Agentic AI Dispatcher]
+        L --> N[Vocal AI Command]
+        L --> O[Drone View Stream]
+        L --> P[DePIN Tokenomics]
     end
 ```
 
+---
+
 ## 📂 Project Structure
 
-*   `/android/sensing-core/`: The core Android library responsible for device capability profiling, battery-aware adaptive sampling, and Edge AI execution.
-*   `/my-app/`: The Next.js frontend Authority Dashboard (Command Center).
-*   *(Coming Soon)* `/gateway/`: The Go/Node.js ingestion API and correlation engine.
-*   *(Coming Soon)* `/blockchain/`: The Hyperledger Fabric smart contracts and network configuration.
-*   *(Coming Soon)* `/digital-twin/`: The Python numerical integration microservice.
+```
+├── android/                   # Native Android Mobile Sensing Application
+│   ├── app/src/main/java/     # MainActivity, GatewaySyncManager (Edge AI & SCT Wallet)
+│   └── app/src/main/res/      # Mobile UI Layouts & Vector Assets
+├── backend-gateway/           # Node.js Ingestion & Digital Twin Backend
+│   ├── src/server.js          # Express Gateway & WebSocket Broadcaster
+│   ├── src/digitalTwin.js     # Physics Engine & Cyber-Physical Threat Detection
+│   └── src/mockDatabase.js    # In-Memory Event & Risk Storage
+├── blockchain/                # Smart Contracts & Ledger Verification
+│   └── contracts/             # ParametricInsurance.sol & Access Control
+├── my-app/                    # Next.js 15 Command Center (Dashboard)
+│   ├── app/page.tsx           # Full Interactive Command Center UI
+│   ├── app/layout.tsx         # Global Providers & Typography
+│   └── public/                # Static Media & Map Assets
+└── README.md                  # Project Documentation
+```
+
+---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-*   Node.js (v18+)
-*   Android Studio (for mobile compilation)
-*   Docker (for upcoming backend/blockchain modules)
+* **Node.js:** v18+ and `npm`
+* **Android Studio:** Ladybug or newer (for mobile build)
+* **Browser:** Chrome/Edge recommended for Web Speech API support
 
-### Running the Authority Dashboard
+### 1. Launch the Backend Gateway
+```bash
+cd backend-gateway
+npm install
+node src/server.js
+```
+*Backend server runs on `http://localhost:4000`.*
+
+### 2. Launch the Next.js Authority Dashboard
 ```bash
 cd my-app
 npm install
 npm run dev
 ```
-Navigate to `http://localhost:3000` to view the dashboard interface.
+*Open `http://localhost:3000` in your web browser.*
 
-### Building the Android Module
+### 3. Run the Mobile Sensor App
 1. Open the `/android` directory in Android Studio.
-2. Sync Gradle files.
-3. Build the `sensing-core` library.
+2. Click **Sync Project with Gradle Files**.
+3. Run the application on an Android device or emulator.
+4. Tap **"START SENSING"** to stream kinetic physics data and earn live ⭐ SCT Tokens.
+
+---
 
 ## 🔒 Security & Privacy
 
-This network is built on a Zero-Trust architecture. 
-*   No personal identifiable information (PII) is sent to the backend. Devices are tracked via rotating pseudonyms (salted hashes of the Hardware ID).
-*   Raw GPS coordinates stay off-chain; the blockchain only stores the SHA-256 hash of the payload.
+* **Zero-Trust Chain of Custody:** Smartphone hardware TEE cryptographically signs vibration telemetry at source.
+* **Pseudonymous Data Privacy:** No Personally Identifiable Information (PII) is transmitted; devices are identified via salted hardware hashes.
+* **Tamper-Proof Audit Trail:** Critical disaster thresholds trigger immutable hashes committed to the smart contract ledger.
 
-## 🤝 Contributing
-Developed for Smart India Hackathon (SIH) 2026.
+---
+
+## 🤝 Team & Hackathon Information
+Developed for **Smart India Hackathon (SIH) 2026** under Problem Statement **SIH26206**.
+

@@ -30,12 +30,16 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
-    implementation("net.zetetic:android-database-sqlcipher:4.5.4")
+    implementation("net.zetetic:sqlcipher-android:4.6.1")
     implementation("androidx.sqlite:sqlite-ktx:2.4.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("com.google.android.gms:play-services-nearby:19.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
-    implementation("org.tensorflow:tensorflow-lite:2.14.0")
-    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite:2.17.0")
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.4") {
+        exclude(group = "org.tensorflow", module = "tensorflow-lite-api")
+        exclude(group = "org.tensorflow", module = "tensorflow-lite")
+    }
     // Optional ONNX path:
     // implementation("com.microsoft.onnxruntime:onnxruntime-android:1.17.0")
 

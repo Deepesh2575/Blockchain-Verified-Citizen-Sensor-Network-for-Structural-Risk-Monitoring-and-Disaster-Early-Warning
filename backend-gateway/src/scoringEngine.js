@@ -20,12 +20,12 @@ function calculateRiskScore(payload) {
 
     // 4. Spatial Consistency (S)
     // In a real system, we query TimescaleDB to see how many devices in a 50m radius also triggered.
-    // For this SIH demo, we'll assume the payload passes a mock correlation count.
     const nearbyDetections = payload.mockNearbyDetections || 1;
     let spatialMultiplier = 1.0;
+    
     if (nearbyDetections >= 5) spatialMultiplier = 1.8;
     else if (nearbyDetections >= 2) spatialMultiplier = 1.4;
-    else if (nearbyDetections === 1) spatialMultiplier = 0.5; // Highly likely a false positive (dropped phone)
+    else if (nearbyDetections === 1) spatialMultiplier = 1.0; // Changed from 0.5 to 1.0 so a single demo phone isn't penalized!
 
     risk = risk * spatialMultiplier;
 

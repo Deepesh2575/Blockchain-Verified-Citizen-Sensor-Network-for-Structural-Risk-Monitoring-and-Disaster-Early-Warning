@@ -22,35 +22,36 @@ class GatewaySyncManager(private val context: Context) {
 
     companion object {
         private const val TAG = "GatewaySyncManager"
-        private const val GATEWAY_URL = "http://10.0.2.2:4000/api/ingest"
+        private const val GATEWAY_URL = "http://10.109.241.233:4000/api/ingest"
     }
 
     /**
      * Called by the live MainActivity when it receives buffered sensor data.
      */
-    suspend fun processSensorStream(deviceId: String, sensorData: FloatArray) {
-        val probability = detector.predictAnomaly(sensorData)
+    suspend fun processSensorStream(deviceId: String, sensorData: FloatArray, maxMagnitude: Float, estimatedFreq: Float, lat: Double, lon: Double, audioRisk: Float = 0.0f) {
+        var probability = detector.predictAnomaly(sensorData)
         
-        if (probability > 0.80f) {
-            Log.w(TAG, "🚨 CRITICAL KINETIC ANOMALY DETECTED! Probability: ${probability * 100}%")
-            syncAnomalyToGateway(deviceId, probability, "T1_SMARTPHONE")
+        // Multi-Modal AI Fusion: Combine Kinetic AI with Acoustic AI
+        val fusedProbability = (probability * 0.7f) + (audioRisk * 0.3f)
+        
+        if (fusedProbability > 0.80f) {
+            Log.w(TAG, "🚨 CRITICAL MULTI-MODAL ANOMALY DETECTED! Probability: ${fusedProbability * 100}%")
+            syncAnomalyToGateway(deviceId, fusedProbability, "T1", estimatedFreq, lat, lon)
         } else {
-            Log.d(TAG, "Status Normal. Probability: ${probability * 100}%")
+            Log.d(TAG, "Status Normal. Probability: ${fusedProbability * 100}%")
         }
     }
 
     /**
      * Sends a verified anomaly payload to the backend.
-     * 
-     * @param deviceId The unique (pseudonymized) hardware ID.
-     * @param anomalyScore The confidence score from the Edge AI TFLite model.
-     * @param sensorTier The capability tier (T1, T2, T3) of this device.
-     * @return true if successful, false if the network is down (triggering offline queue).
      */
     suspend fun syncAnomalyToGateway(
         deviceId: String,
         anomalyScore: Float,
-        sensorTier: String
+        sensorTier: String,
+        peakFrequency: Float,
+        lat: Double,
+        lon: Double
     ): Boolean = withContext(Dispatchers.IO) {
         
         try {
@@ -59,8 +60,11 @@ class GatewaySyncManager(private val context: Context) {
                 put("eventId", java.util.UUID.randomUUID().toString())
                 put("timestamp", System.currentTimeMillis())
                 put("aiAnomalyScore", anomalyScore)
-                put("sensorTier", sensorTier)
+                put("sensorTier", sensorTier) // Must be exactly "T1" for 1.0 multiplier
                 put("hasHardwareAttestation", true) // Claiming we have a valid TEE Keystore signature
+                put("peakFrequencyHz", peakFrequency) // The real shaking frequency!
+                put("latitude", lat) 
+                put("longitude", lon)
             }
 
             // 2. Wrap with Cryptographic Signature (Trust Layer)

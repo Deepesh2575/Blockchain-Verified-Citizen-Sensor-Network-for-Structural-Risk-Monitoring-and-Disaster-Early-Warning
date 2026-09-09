@@ -1,10 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b74fe26d-a4fe-4850-a177-761b659c9017" name="Changes" comment="" />
+    <list default="true" id="b74fe26d-a4fe-4850-a177-761b659c9017" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/AndroidProjectSystem.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/caches/deviceStreaming.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/deviceManager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/migrations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea_backup/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_status_dot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-8.7-bin.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/audio/AcousticFingerprint.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/comms/BleMeshRouter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/comms/LocalIoTMesh.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/comms/SatelliteUplink.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/comms/UltrasonicTransceiver.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/crypto/ZKProofGenerator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wearable/src/main/java/com/sih26223/wearable/VitalsMonitor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend-gateway/src/droneDispatchMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend-gateway/src/evacuationSim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend-gateway/src/federatedAggregator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend-gateway/src/genAIVision.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend-gateway/src/meshSimulator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend-gateway/src/satelliteTracker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/circuits/anomaly.circom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/contracts/ParametricInsurance.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/contracts/ZKVerifier.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/hardhat.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/scripts/compile_circuit.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../blockchain/scripts/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.0.0/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.0.0/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.0.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sih26223/app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sih26223/app/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensing-core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/ml/AnomalyDetector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/ml/AnomalyDetector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/network/GatewaySyncManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/network/GatewaySyncManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/storage/SecureObservationStoreRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/storage/SecureObservationStoreRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/digitalTwin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/digitalTwin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/scoringEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/scoringEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ml-training/anomaly_model.tflite" beforeDir="false" afterPath="$PROJECT_DIR$/../ml-training/anomaly_model.tflite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-app" beforeDir="false" afterPath="$PROJECT_DIR$/../my-app" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +92,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\DEEPESH\.android\avd\Pixel_9a.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -29,7 +109,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="sih26223-sensing" type="f1a62948:ProjectNode" />
+                <item name="SIH26223-Sensing" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -38,31 +118,114 @@
       </state>
     </system>
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\DEEPESH\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0" javaHome="C:\Program Files\Android\Android Studio\jbr" gradleVersion="9.0.0" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\DEEPESH\.gradle\wrapper\dists\gradle-8.7-bin\1rd5xydvwfs16oanlfa8qagsv\gradle-8.7" javaHome="C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot" gradleVersion="8.7" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3IaYudwYAdFLiziZaQZo2Ws2lcD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/programming files of my/sih 2026 project/android",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/programming files of my/sih 2026 project/android&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;experimental&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="SIH26223-Sensing.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b74fe26d-a4fe-4850-a177-761b659c9017" name="Changes" comment="" />
@@ -72,5 +235,16 @@
       <updated>1788004369787</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

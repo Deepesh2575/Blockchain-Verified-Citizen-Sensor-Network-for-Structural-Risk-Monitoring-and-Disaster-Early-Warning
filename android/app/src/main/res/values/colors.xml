@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03DAC5</color>
+    <color name="colorPrimaryDark">#018786</color>
+    <color name="colorAccent">#03DAC5</color>
+    
+    <color name="backgroundDark">#0D0D12</color>
+    <color name="cardBackground">#1A1A24</color>
+    <color name="cardStroke">#2A2A35</color>
+    
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textSecondary">#8E8E93</color>
+    
+    <color name="statusOffline">#4A4A55</color>
+    <color name="statusListening">#4CAF50</color>
+    <color name="neonGreen">#00FF41</color>
+    
+    <color name="btnStart">#4CAF50</color>
+    <color name="btnStop">#F44336</color>
+    
+    <color name="alertRed">#D32F2F</color>
+    <color name="alertBackground">#2D0B0B</color>
+</resources>
