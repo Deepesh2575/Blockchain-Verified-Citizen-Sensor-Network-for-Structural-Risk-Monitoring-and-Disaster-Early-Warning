@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#03DAC5</color>
-    <color name="colorPrimaryDark">#018786</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#00E5FF</color>
+    <color name="colorPrimaryDark">#00B8D4</color>
+    <color name="colorAccent">#00E676</color>
     
-    <color name="backgroundDark">#0D0D12</color>
-    <color name="cardBackground">#1A1A24</color>
-    <color name="cardStroke">#2A2A35</color>
+    <color name="backgroundDark">#0A0E17</color>
+    <color name="cardBackground">#121824</color>
+    <color name="cardStroke">#1E2638</color>
+    <color name="cardBackgroundVariant">#18202F</color>
     
     <color name="textPrimary">#FFFFFF</color>
-    <color name="textSecondary">#8E8E93</color>
+    <color name="textSecondary">#94A3B8</color>
+    <color name="textTertiary">#64748B</color>
     
-    <color name="statusOffline">#4A4A55</color>
-    <color name="statusListening">#4CAF50</color>
+    <color name="statusOffline">#334155</color>
+    <color name="statusListening">#00E676</color>
     <color name="neonGreen">#00FF41</color>
+    <color name="neonCyan">#00E5FF</color>
+    <color name="neonPurple">#B388FF</color>
+    <color name="neonRed">#FF1744</color>
     
-    <color name="btnStart">#4CAF50</color>
-    <color name="btnStop">#F44336</color>
+    <color name="btnStart">#00C853</color>
+    <color name="btnStop">#FF1744</color>
     
-    <color name="alertRed">#D32F2F</color>
+    <color name="alertRed">#FF1744</color>
     <color name="alertBackground">#2D0B0B</color>
 </resources>

@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "SIH26223-Sensing"
 include(":sensing-core")
 include(":app")
+include(":wearable")

@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-permission android:name="android.permission.VIBRATE" />
     
     <!-- Nearby Connections / BLE Mesh Permissions -->
@@ -35,6 +36,15 @@
 
         <activity android:name=".ArEscapeRouteActivity" android:exported="false" />
         <activity android:name=".RubbleModeActivity" android:exported="false" />
+
+        <service
+            android:name=".WearableMessageListenerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/casualty_event" />
+            </intent-filter>
+        </service>
 
     </application>
 

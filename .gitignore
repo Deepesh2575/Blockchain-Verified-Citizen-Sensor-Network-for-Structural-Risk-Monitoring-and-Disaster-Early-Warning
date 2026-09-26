@@ -7,6 +7,7 @@ android/sensing-core/build/
 android/build/
 android/local.properties
 my-app/.next/
+my-app/public/cesium/
 ml-training/venv/
 ml-training/venv_win/
 ml-training/__pycache__/

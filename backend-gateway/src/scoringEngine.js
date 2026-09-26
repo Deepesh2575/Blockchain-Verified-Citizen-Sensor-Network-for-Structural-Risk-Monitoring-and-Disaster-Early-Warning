@@ -33,6 +33,28 @@ function calculateRiskScore(payload) {
     return Math.min(risk, 1.0);
 }
 
+function classifyRiskStage(score) {
+    if (score >= 0.75) return "CRITICAL";
+    if (score >= 0.55) return "WARNING";
+    if (score >= 0.35) return "WATCH";
+    return "NORMAL";
+}
+
+function extractRiskFactors(payload, twinCorrelation) {
+    const nearby = payload.mockNearbyDetections || payload.localDeviceCount || 1;
+    return {
+        A: Number(payload.aiAnomalyScore ?? 0.5),
+        Q: payload.sensorTier === "T1" ? 1 : payload.sensorTier === "T2" ? 0.8 : 0.6,
+        T: payload.hasHardwareAttestation ? 1 : 0.5,
+        S: Math.min(1, nearby / 5),
+        P: Number(twinCorrelation ?? 0.5),
+        C: payload.signatureValid === false ? 0.2 : 1,
+        H: payload.biometricAuth === "Verified" ? 1 : 0.6,
+    };
+}
+
 module.exports = {
-    calculateRiskScore
+    calculateRiskScore,
+    classifyRiskStage,
+    extractRiskFactors,
 };

@@ -2,331 +2,679 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundDark"
-    android:padding="24dp">
+    android:background="@color/backgroundDark">
 
-    <!-- Header Section -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SIH 2026"
-        android:textColor="@color/textSecondary"
-        android:textSize="14sp"
-        android:letterSpacing="0.1"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-        
-    <!-- Token Wallet -->
+    <!-- Top Header -->
     <LinearLayout
-        android:id="@+id/walletContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="8dp"
-        android:background="#20FFC107"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="⭐ "
-            android:textSize="14sp" />
-            
-        <TextView
-            android:id="@+id/tvWalletBalance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0.00 SCT"
-            android:textColor="#FFC107"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:fontFamily="monospace" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edge Sensor Node"
-        android:textColor="@color/textPrimary"
-        android:textSize="28sp"
-        android:fontFamily="sans-serif-black"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="4dp"/>
-
-    <!-- Status Indicator -->
-    <LinearLayout
-        android:id="@+id/statusContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp">
-
-        <View
-            android:id="@+id/statusDot"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:background="@drawable/bg_status_dot"
-            android:backgroundTint="@color/statusOffline" />
-
-        <TextView
-            android:id="@+id/tvStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="OFFLINE"
-            android:textColor="@color/textSecondary"
-            android:textSize="16sp"
-            android:fontFamily="sans-serif-medium" />
-    </LinearLayout>
-
-    <!-- Sensor Data Card -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/sensorCard"
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/statusContainer"
-        android:layout_marginTop="32dp"
-        app:cardBackgroundColor="@color/cardBackground"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
-        app:strokeColor="@color/cardStroke"
-        app:strokeWidth="1dp">
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:tint="@color/textPrimary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIH 2026"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart India Hackathon"
+                android:textColor="@color/textSecondary"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCT Balance"
+                android:textColor="@color/textSecondary"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/tvWalletBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,248.75 SCT"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-black" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/bg_status_dot"
+                    android:backgroundTint="@color/colorAccent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Wallet Connected"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Title Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LIVE ACCELEROMETER"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edge Node"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="36sp"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="-0.02" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <View
+                            android:id="@+id/statusDot"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_status_dot"
+                            android:backgroundTint="@color/statusListening" />
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="ONLINE"
+                            android:textColor="@color/statusListening"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="• Citizen Sensor Network"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="end"
+                    android:background="@color/cardBackground"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Node ID"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EN-7F3C-9A2B"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Accelerometer Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/cardStroke"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Live Accelerometer"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- X Axis -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="X axis"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="12sp" />
+                        <com.sih26223.app.view.WaveformView
+                            android:id="@+id/waveX"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp" />
+                        <TextView
+                            android:id="@+id/tvValX"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="0.128"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="12sp"
+                            android:gravity="end"
+                            android:fontFamily="monospace" />
+                    </LinearLayout>
+
+                    <!-- Y Axis -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="Y axis"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="12sp" />
+                        <com.sih26223.app.view.WaveformView
+                            android:id="@+id/waveY"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp" />
+                        <TextView
+                            android:id="@+id/tvValY"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="-0.073"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="12sp"
+                            android:gravity="end"
+                            android:fontFamily="monospace" />
+                    </LinearLayout>
+
+                    <!-- Z Axis -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="Z axis"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="12sp" />
+                        <com.sih26223.app.view.WaveformView
+                            android:id="@+id/waveZ"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="8dp" />
+                        <TextView
+                            android:id="@+id/tvValZ"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="0.036"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="12sp"
+                            android:gravity="end"
+                            android:fontFamily="monospace" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sampling: 100 Hz  |  Range: ±2g"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Multi Modal Sensing Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multi-Modal Sensing"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="2dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Real-time data streams from edge sensors"
                 android:textColor="@color/textSecondary"
                 android:textSize="12sp"
-                android:letterSpacing="0.1"
-                android:fontFamily="sans-serif-medium"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="12dp" />
 
+            <!-- Multi Modal Sensors Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="3"
-                android:baselineAligned="false">
-                
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="X-Axis"
-                        android:textColor="@color/textSecondary"
-                        android:textSize="12sp"/>
-                    <TextView
-                        android:id="@+id/tvValX"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp"
-                        android:fontFamily="monospace"/>
-                </LinearLayout>
+                android:baselineAligned="false"
+                android:layout_marginBottom="16dp">
 
-                <LinearLayout
+                <!-- Seismic -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    app:cardBackgroundColor="@color/cardBackgroundVariant"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/cardStroke"
+                    app:strokeWidth="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Y-Axis"
-                        android:textColor="@color/textSecondary"
-                        android:textSize="12sp"/>
-                    <TextView
-                        android:id="@+id/tvValY"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="0.00"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp"
-                        android:fontFamily="monospace"/>
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seismic Wave"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="10sp" />
+                        <com.sih26223.app.view.WaveformView
+                            android:id="@+id/waveMag"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginVertical="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PGA"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="8sp" />
+                        <TextView
+                            android:id="@+id/tvValMag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.156g"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout
+                <!-- Acoustic -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    app:cardBackgroundColor="@color/cardBackgroundVariant"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/cardStroke"
+                    app:strokeWidth="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Z-Axis"
-                        android:textColor="@color/textSecondary"
-                        android:textSize="12sp"/>
-                    <TextView
-                        android:id="@+id/tvValZ"
-                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Acoustic Spec"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="10sp" />
+                        <com.sih26223.app.view.WaveformView
+                            android:id="@+id/waveAcoustic"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginVertical="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Peak"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="8sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3.12 kHz"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- FFT -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    app:cardBackgroundColor="@color/cardBackgroundVariant"
+                    app:cardCornerRadius="12dp"
+                    app:strokeColor="@color/cardStroke"
+                    app:strokeWidth="1dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="0.00"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp"
-                        android:fontFamily="monospace"/>
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FFT Analysis"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="10sp" />
+                        <com.sih26223.app.view.WaveformView
+                            android:id="@+id/waveFft"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginVertical="8dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dominant"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="8sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18.6 Hz"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/cardStroke"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"/>
-
-            <LinearLayout
+            <!-- BLE Mesh Network -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="wrap_content"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/cardStroke"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="KINETIC MAGNITUDE:"
-                    android:textColor="@color/textSecondary"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:layout_weight="1"/>
-                <TextView
-                    android:id="@+id/tvValMag"
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="BLE Mesh Network"
+                                android:textColor="@color/textPrimary"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CONNECTED"
+                                android:textColor="@color/statusListening"
+                                android:textSize="12sp"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="sans-serif-black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12 / 20 Nodes Online"
+                                android:textColor="@color/textSecondary"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <!-- Topology Placeholder -->
+                        <View
+                            android:layout_width="120dp"
+                            android:layout_height="60dp"
+                            android:background="#2000E5FF" />
+                    </LinearLayout>
+                    
+                    <!-- Hidden button just to preserve ID for MainActivity -->
+                    <Button
+                        android:id="@+id/btnRubbleMode"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- AR Evacuation -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnArEscape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundVariant"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/neonPurple"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="0.00 G"
-                    android:textColor="@color/textPrimary"
-                    android:textSize="24sp"
-                    android:fontFamily="sans-serif-bold"/>
-            </LinearLayout>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+                    
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AR Evacuation"
+                            android:textColor="@color/neonPurple"
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap to start AR guidance"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Exits Detected: 2"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="10sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distance: 18m"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                    
+                    <View
+                        android:layout_width="120dp"
+                        android:layout_height="60dp"
+                        android:background="#20B388FF" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-    <!-- Start/Stop Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToggleSensing"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:text="START SENSING"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-black"
-        app:cornerRadius="16dp"
-        app:layout_constraintTop_toBottomOf="@id/sensorCard"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/btnStart"
-        android:textColor="@color/textPrimary"/>
+            <!-- Federated Learning -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnTriggerFL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/cardStroke"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+                    
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_status_dot"
+                        android:backgroundTint="#2000E5FF" />
+                        
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Federated Learning"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-medium" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Global Model Sync • Round 23 of 50"
+                            android:textColor="@color/textSecondary"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOCAL MODEL"
+                        android:textColor="@color/statusListening"
+                        android:background="#1500E676"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp"
+                        android:textSize="8sp"
+                        android:fontFamily="sans-serif-black" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-    <!-- Hackathon Features Row -->
-    <LinearLayout
-        android:id="@+id/featureButtonsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        app:layout_constraintTop_toBottomOf="@id/btnToggleSensing"
-        android:layout_marginTop="8dp">
+            <!-- Action Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleSensing"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:text="✨ START AI SENSING"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-black"
+                app:cornerRadius="16dp"
+                android:backgroundTint="@color/btnStart"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="24dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnArEscape"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="AR ROUTE"
-            android:textSize="10sp"
-            android:visibility="gone"
-            android:backgroundTint="#FF9800" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRubbleMode"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:text="RUBBLE MODE"
-            android:textSize="10sp"
-            android:backgroundTint="#D32F2F" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnTriggerFL"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="4dp"
-            android:text="NIGHTLY AI"
-            android:textSize="10sp"
-            android:backgroundTint="#1976D2" />
-    </LinearLayout>
-
-    <!-- Terminal/Log Console -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/logCard"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/btnToggleSensing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="32dp"
-        app:cardBackgroundColor="@color/backgroundDark"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="0dp"
-        app:strokeColor="@color/cardStroke"
-        app:strokeWidth="1dp">
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            
+            <!-- AI Logs -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="AI INFERENCE LOGS"
-                android:textColor="@color/textSecondary"
-                android:textSize="10sp"
-                android:letterSpacing="0.1"
-                android:fontFamily="monospace"
-                android:padding="8dp"
-                android:background="@color/cardBackground"/>
+                android:text="AI Sensing Logs"
+                android:textColor="@color/textPrimary"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="8dp" />
                 
             <ScrollView
                 android:id="@+id/logScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp"
-                android:fadeScrollbars="false">
+                android:layout_height="120dp"
+                android:background="@color/cardBackground"
+                android:padding="8dp">
+                
                 <TextView
                     android:id="@+id/tvLogConsole"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="> System Initialized...\n"
+                    android:text="edge-node:~$ system_init\n[INFO] Accelerometer stream active"
                     android:textColor="@color/neonGreen"
-                    android:textSize="12sp"
-                    android:fontFamily="monospace"/>
+                    android:textSize="10sp"
+                    android:fontFamily="monospace" />
             </ScrollView>
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
 
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

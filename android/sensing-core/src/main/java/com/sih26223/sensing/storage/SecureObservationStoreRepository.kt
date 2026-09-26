@@ -33,36 +33,41 @@ class SecureObservationStore(
     private val dao = db.observationDao()
 
     suspend fun enqueue(event: ObservationEvent, priority: Int = priorityFor(event)) {
-        mutex.withLock {
-            val json = eventToJson(event)
-            val bytes = json.toByteArray(Charsets.UTF_8)
-            val entity = ObservationEntity(
-                id = event.id,
-                createdAtEpochMs = event.createdAtEpochMs,
-                priority = priority,
-                eventType = event.eventType,
-                confidence = event.confidence,
-                payloadJson = json,
-                payloadHashHex = event.payloadHashHex,
-                sizeBytes = bytes.size
-            )
-            dao.insert(entity)
-            enforceLimits()
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            mutex.withLock {
+                val json = eventToJson(event)
+                val bytes = json.toByteArray(Charsets.UTF_8)
+                val entity = ObservationEntity(
+                    id = event.id,
+                    createdAtEpochMs = event.createdAtEpochMs,
+                    priority = priority,
+                    eventType = event.eventType,
+                    confidence = event.confidence,
+                    payloadJson = json,
+                    payloadHashHex = event.payloadHashHex,
+                    sizeBytes = bytes.size
+                )
+                dao.insert(entity)
+                enforceLimits()
+            }
         }
     }
 
-    suspend fun pendingBatch(limit: Int = 50): List<ObservationEntity> = dao.pendingBatch(limit)
+    suspend fun pendingBatch(limit: Int = 50): List<ObservationEntity> = 
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { dao.pendingBatch(limit) }
 
     suspend fun markAcked(ids: List<String>) {
-        dao.markAcked(ids)
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { dao.markAcked(ids) }
     }
 
     suspend fun storageStats(): StorageStats {
-        return StorageStats(
-            totalBytes = dao.totalSizeBytes(),
-            eventCount = dao.count(),
-            maxBytes = maxBytes
-        )
+        return kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            StorageStats(
+                totalBytes = dao.totalSizeBytes(),
+                eventCount = dao.count(),
+                maxBytes = maxBytes
+            )
+        }
     }
 
     private suspend fun enforceLimits() {

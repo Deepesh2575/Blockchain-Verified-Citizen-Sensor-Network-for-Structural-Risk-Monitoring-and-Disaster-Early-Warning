@@ -109,5 +109,8 @@ function validateWithPhysicsModel(payload) {
 }
 
 module.exports = {
-    validateWithPhysicsModel
+    validateWithPhysicsModel,
+    resolveStructureByLocation,
+    geoFences,
+    structureModels,
 };

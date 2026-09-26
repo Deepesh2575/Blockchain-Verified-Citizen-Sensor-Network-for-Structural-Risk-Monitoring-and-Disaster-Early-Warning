@@ -20,6 +20,7 @@ contract ParametricInsurance {
     address public immutable authorityGateway;
 
     event FundsDisbursed(string eventId, uint256 amount);
+    event DroneBountyIssued(string eventId, string latitude, string longitude, uint256 bountyAmount);
 
     constructor() {
         // Only the backend gateway (or Hyperledger oracle) can trigger payouts
@@ -29,7 +30,7 @@ contract ParametricInsurance {
     /**
      * @dev Called by the backend gateway when a CRITICAL event is anchored.
      */
-    function triggerDisasterEvent(string memory _eventId, uint256 _riskScore) external {
+    function triggerDisasterEvent(string memory _eventId, uint256 _riskScore, string memory _lat, string memory _lon) external {
         require(msg.sender == authorityGateway, "Only authorized gateway can trigger events");
         require(_riskScore > 90, "Risk score too low for parametric payout");
         
@@ -41,6 +42,7 @@ contract ParametricInsurance {
         });
 
         _executePayout(_eventId);
+        issueDroneBounty(_eventId, _lat, _lon);
     }
 
     function _executePayout(string memory _eventId) internal {
@@ -52,5 +54,10 @@ contract ParametricInsurance {
         
         disaster.fundsDisbursed = true;
         emit FundsDisbursed(_eventId, 1000000); // e.g. 1 Million tokens disbursed
+    }
+
+    function issueDroneBounty(string memory _eventId, string memory _lat, string memory _lon) internal {
+        // MOCK: Lock up 500 SCT tokens for the first autonomous drone to stream video
+        emit DroneBountyIssued(_eventId, _lat, _lon, 500);
     }
 }

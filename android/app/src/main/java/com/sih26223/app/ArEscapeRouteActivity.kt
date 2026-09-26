@@ -28,14 +28,32 @@ class ArEscapeRouteActivity : AppCompatActivity() {
             finish()
         }
 
-        // Simulate detecting a path and overlaying arrows
+        // Simulate GenAI Vision analyzing the AR Camera Feed for structural hazards
         CoroutineScope(Dispatchers.Main).launch {
+            tvArStatus.text = "Initializing GenAI Vision Engine..."
+            delay(1500)
+            tvArStatus.text = "Scanning physical structure geometry..."
             delay(2000)
-            tvArStatus.text = "Floor detected. Follow the glowing arrows to West Exit."
+            
+            // Mock output from an edge AI or cloud Gemini API call
+            val hazardsFound = listOf(
+                "CRITICAL: Unstable load-bearing beam detected directly ahead.",
+                "WARNING: Exposed 220V electrical wires on left wall.",
+                "SAFE ROUTE: Turn right towards North Fire Exit."
+            )
+            
+            // Iterate and display the hazards dynamically
+            for (hazard in hazardsFound) {
+                tvArStatus.text = "GenAI Analysis: $hazard"
+                delay(3000)
+            }
+            
+            tvArStatus.text = "Floor plan mapped. Follow the glowing AR arrows to the North Exit."
             
             // In a real implementation:
-            // sceneView.addChild(ModelNode(modelInstance = ...))
-            // attached to an Anchor on the AR plane.
+            // 1. Capture CameraX frame -> Convert to Bitmap
+            // 2. Send to Gemini Vision API: "Identify structural hazards in this rubble."
+            // 3. Parse JSON response and anchor 3D warning nodes (e.g., sceneView.addChild(ModelNode(modelInstance = ...)))
         }
     }
 }

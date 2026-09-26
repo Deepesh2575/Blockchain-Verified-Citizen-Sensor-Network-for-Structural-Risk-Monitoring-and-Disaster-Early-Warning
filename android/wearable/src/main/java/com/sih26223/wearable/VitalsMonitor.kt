@@ -11,7 +11,10 @@ import android.util.Log
  * Monitors sudden velocity changes combined with heart rate anomalies 
  * to validate human casualty events.
  */
-class VitalsMonitor(private val sensorManager: SensorManager) : SensorEventListener {
+class VitalsMonitor(
+    private val sensorManager: SensorManager,
+    private val onCasualtyEvent: (Float) -> Unit
+) : SensorEventListener {
     
     private val TAG = "VitalsMonitor"
     
@@ -55,18 +58,13 @@ class VitalsMonitor(private val sensorManager: SensorManager) : SensorEventListe
     }
 
     private fun checkCasualtyCondition() {
-        // If a massive shockwave was detected AND heart rate spikes over 160 or drops to 0
+        // If a massive shockwave was detected AND heart rate spikes over 160 or drops to 30
         if (recentHighGEvent && (currentHeartRate > 160f || currentHeartRate < 30f)) {
             Log.e(TAG, "🚨 HIGH PROBABILITY HUMAN CASUALTY EVENT 🚨")
-            sendBleIntentToPhone()
+            onCasualtyEvent(currentHeartRate)
             // Reset to avoid spam
             recentHighGEvent = false 
         }
-    }
-
-    private fun sendBleIntentToPhone() {
-        Log.d(TAG, "Sending BLE Intent to primary smartphone to escalate Risk Score...")
-        // Implements Android Wearable DataLayer API or direct BLE broadcast here
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
