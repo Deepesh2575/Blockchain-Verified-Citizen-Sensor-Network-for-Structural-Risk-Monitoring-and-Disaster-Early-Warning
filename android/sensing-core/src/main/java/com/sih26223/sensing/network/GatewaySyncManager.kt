@@ -13,7 +13,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider
 import java.security.Security
 import android.util.Base64
 
-import com.sih26223.app.trust.CryptoSigner
+import com.sih26223.sensing.crypto.CryptoSigner
+import java.security.KeyPairGenerator
+import java.security.Signature
 import com.sih26223.sensing.offline.OfflineDatabase
 import com.sih26223.sensing.offline.OfflineEventEntity
 import kotlinx.coroutines.GlobalScope

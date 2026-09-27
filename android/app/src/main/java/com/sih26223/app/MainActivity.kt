@@ -11,11 +11,11 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import com.sih26223.app.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.sih26223.app.profiler.DeviceProfiler
-import com.sih26223.app.trust.CryptoSigner
-import com.sih26223.app.profiler.DeviceProfiler
+import com.sih26223.sensing.crypto.CryptoSigner
 import com.sih26223.app.view.WaveformView
 import com.sih26223.sensing.network.GatewaySyncManager
 import com.sih26223.sensing.network.LocalNetworkScanner

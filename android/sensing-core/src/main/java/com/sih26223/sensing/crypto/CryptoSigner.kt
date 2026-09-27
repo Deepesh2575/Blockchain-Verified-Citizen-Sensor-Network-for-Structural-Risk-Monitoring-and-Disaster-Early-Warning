@@ -1,4 +1,4 @@
-package com.sih26223.app.trust
+package com.sih26223.sensing.crypto
 
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties

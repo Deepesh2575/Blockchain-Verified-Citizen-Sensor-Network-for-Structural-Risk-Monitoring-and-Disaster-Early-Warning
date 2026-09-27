@@ -25,7 +25,7 @@ data class ObservationEntity(
 interface ObservationDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(entity: ObservationEntity)
+    fun insert(entity: ObservationEntity): Long
 
     @Query("SELECT COALESCE(SUM(sizeBytes), 0) FROM observation_queue")
     fun totalSizeBytes(): Long
@@ -37,10 +37,10 @@ interface ObservationDao {
     fun pendingBatch(limit: Int): List<ObservationEntity>
 
     @Query("UPDATE observation_queue SET syncState = 'acked' WHERE id IN (:ids)")
-    fun markAcked(ids: List<String>)
+    fun markAcked(ids: List<String>): Int
 
     @Query("DELETE FROM observation_queue WHERE id IN (:ids)")
-    fun deleteByIds(ids: List<String>)
+    fun deleteByIds(ids: List<String>): Int
 
     @Query("SELECT id FROM observation_queue ORDER BY priority DESC, createdAtEpochMs ASC LIMIT :count")
     fun oldestLowPriorityIds(count: Int): List<String>
