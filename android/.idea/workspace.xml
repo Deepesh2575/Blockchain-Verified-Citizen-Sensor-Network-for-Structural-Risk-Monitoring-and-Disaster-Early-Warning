@@ -10,54 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b74fe26d-a4fe-4850-a177-761b659c9017" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.0.0/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sih26223/app/ArEscapeRouteActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sih26223/app/ArEscapeRouteActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sih26223/app/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sih26223/app/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensing-core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/network/GatewaySyncManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/network/GatewaySyncManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/storage/SecureObservationStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/storage/SecureObservationStore.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/storage/SecureObservationStoreRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/sensing-core/src/main/java/com/sih26223/sensing/storage/SecureObservationStoreRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wearable/src/main/java/com/sih26223/wearable/VitalsMonitor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/wearable/src/main/java/com/sih26223/wearable/VitalsMonitor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/digitalTwin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/digitalTwin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/genAIVision.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/genAIVision.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/scoringEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/scoringEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blockchain/contracts/ParametricInsurance.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../blockchain/contracts/ParametricInsurance.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-app" beforeDir="false" afterPath="$PROJECT_DIR$/../my-app" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +20,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[PhysicalDevice::serial=W85TPZ9LDMUWNVRK]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\DEEPESH\.android\avd\Pixel_9a.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
